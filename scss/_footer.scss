@@ -1,0 +1,80 @@
+@mixin faded {
+    color: rgba($color: #ffffff, $alpha: 0.5);
+}
+
+
+#footer{
+    width: 100vw;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include tablet{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include desktop{
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+
+    background-color: #350642;
+    color: white;
+    p{
+        @include faded;
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 1.6rem;
+    }
+    ul{
+        list-style: none;
+
+        li{
+            font-size: 1.2rem;
+            @include faded;
+            padding-bottom: .4rem;
+           a{
+              @include faded;
+               word-wrap: break-word;
+               &:hover{
+                color: $accent-color;
+                text-decoration: underline;
+               }
+           }
+        }
+    }
+
+ 
+}
+
+.social{
+    display: flex;
+    
+    svg{
+        fill: white;
+        width: 1.5rem;
+        transition: all ease-in-out .5s;
+        transform: scale(1)
+    }
+    
+    a{
+        
+        &:hover{       
+            svg{
+                transition: all ease-in-out .2s;
+                fill: $accent-color;
+                transform: scale(1.5)
+            }   
+        }
+    }
+
+    .linked{
+        margin-left: 32px;
+    }
+    .insta{
+        margin: 32px;
+    }
+
+}

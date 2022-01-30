@@ -1,0 +1,155 @@
+#header{
+  position: absolute; z-index: 1; right: 0; left: 0;
+}
+
+.header{
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label{
+    z-index: 3;
+    display: none;
+ }
+
+ nav{
+   ul{
+    display: flex;
+    li{
+      a{
+        color: white;
+        &:hover{
+          color:   $accent-color;
+        }
+      }
+    }
+   }
+ }
+
+  
+@media (max-width:767px) {
+
+label{
+  display: block;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 1;
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 10rem 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    background: #272727;
+    text-transform: uppercase;
+    transition: opacity .8s 0.4s, clip-path .8s .4s;
+    clip-path: circle(200px at top right);
+
+    &.open{
+      opacity: 1;
+      clip-path: circle(100% at center);
+    }
+  }
+}
+
+    input[type="checkbox"]{
+      appearance: none;
+      pointer-events: none;
+      display: none;
+
+      &:checked ~ .bar .top{
+        transform: rotate(-45deg);
+        width: 30px;
+        transform-origin: right;
+        top: -19px;
+      }
+    
+    
+      &:checked ~ .bar .bottom{
+        transform: rotate(45deg);
+        width: 30px;
+       transform-origin: right;
+        bottom: 19px;
+      }
+    
+      &:checked ~ .bar .middle{
+        transform: translateX(20px);
+        opacity: 0;
+      }
+    
+    }
+    
+    $bar-height: 2px;
+    $bar-width:25px;
+    .bar{
+      position: relative;
+      right: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    
+    
+      .middle{
+        height: $bar-height;
+        width: $bar-width;
+        background: white;
+        border-radius: 25px;
+        position: absolute;
+        transition: .4s ease;
+      }
+    
+      .top{
+        bottom: 3px;
+        height: $bar-height;
+        width: $bar-width;
+        background: white;
+        border-radius: 25px;
+        position: absolute;
+        transition: .4s ease;
+      }
+    
+      .bottom{  
+        top: 5px;  
+        height: $bar-height;
+        width: $bar-width;
+        background: white;
+        border-radius: 25px;
+        position: absolute;
+        transition: .4s ease;
+      }
+    
+    }    
+  }
+
+ @include tablet{
+  label{
+     display: none;
+  }
+  
+  nav{
+    ul{
+      font-size: 1.2rem;
+      li{
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+}
+
+

@@ -1,0 +1,35 @@
+$duration: 0.4s;
+
+.button{
+    margin: 2rem 0;
+    border-color: $accent-color;
+    color: black;
+    background: $accent-color;
+    font-size: 1rem;
+    transition: all $duration;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    position: relative;
+    transition: $duration;
+
+    &:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;  
+        //top: 14px;
+        right: -20px;
+        transition: $duration;
+      }
+
+    &:hover{
+        border-color: black;
+        color: $primary-color;
+        padding-right: 24px;
+        padding-left:8px;
+    }
+
+    &:hover:after {
+        opacity: 1;
+        right: 10px;
+      }
+
+}

@@ -1,0 +1,14 @@
+.logo{
+    color: white;
+    display: block;
+    span{
+        font-size: 1.8rem;
+    }
+   
+    &:hover{
+        color: $secondary-color;
+    }
+    svg{
+        width: 3rem;
+    }
+}

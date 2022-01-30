@@ -1,0 +1,279 @@
+@import './normalize';
+@import './skeleton';
+@import './media-query';
+@import './transition';
+@import './reset';
+@import './colors';
+@import './utils';
+@import './navbar';
+@import './footer';
+@import './typography';
+@import './logo'; 
+@import './button';
+@import './404';
+@import './preloader';
+
+
+.cookie-container{
+ position: fixed;
+ display: none;
+ bottom: 0;
+ width: 100%;
+ padding: .5rem;
+ background: transparent;
+ z-index: 1000;
+
+ @include tablet{
+     width: 50%;
+ }
+
+  @include desktop{
+     width: 40%;
+ }
+
+ @media (min-width:1440px) {
+        width: 30%;
+ }
+
+ @include hiResDisp{
+     width: 20%;
+ }
+
+
+ .cookie-flex{
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+    }
+
+    .cookie-btn{
+    color: white;
+    text-align: end;
+    @include mobileOnly{
+        width: 100%;
+    }
+    button{
+        background-color: #3c88eb;
+    }
+     @include tablet{
+        margin-left: 1rem;
+    }
+   }
+ }
+
+ .cookie-child{
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width: auto;
+    background: black;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    .title{
+        font-size: 1.5rem;
+    }
+    .cookie-icon{
+        display: flex;
+        gap: 1rem;
+        justify-content: start;
+        align-items: center;
+    }
+ }
+
+}
+
+h2.app-title{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.slides{
+ div{
+     text-align: center;
+ }
+}
+
+#main{
+    width: 100vw;
+    padding-top: 20vh;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to right top, #320066, #440f6e, #551e77, #652c7f, #753a88);
+
+}
+.doodle{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+    background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-800-port.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767px) and (orientation:landscape) {
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-800.webp");
+    }
+
+    @include desktop{
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-1400.webp");
+    }
+    
+    @include hiResDisp{
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-2560.webp");
+    }
+    
+}
+
+h5.help-title{
+    margin-bottom: 0;
+   text-decoration: underline;
+    
+}
+
+.help-paragragh{
+    font-size: .8rem;
+}
+
+.help-container{
+ div{
+     margin-bottom: 1rem;
+ }
+}
+
+.bold{
+    color: $accent-color;
+}
+
+p.feature-title{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.polygon{
+/*  clip-path: polygon(0 0%, 100% 0, 100% 85%, 0 100%);
+ @include tablet{
+    clip-path: polygon(0 0%, 100% 0, 100% 70%, 0 100%);
+ } */
+}
+
+
+a.underline{
+    text-decoration: underline;
+    font-size: 1rem;
+    &:hover{
+        color: $accent-color;
+    }
+}
+
+.policy{
+    color: $textDark;
+    @include tablet{
+        background-color: #f5f5f5;
+    }
+    .content{
+        background-color: white;
+        @include tablet{
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+    }
+    h5{
+        font-size: 2rem;
+        color: black;
+    }
+
+    h6{
+        color: black;
+    }
+
+    p,li{
+        font-size: 1.5rem;
+    }
+
+    ol, ul{
+        
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 2rem;
+    }
+    a{
+        text-decoration: underline;
+        color: blue;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+   
+    li{
+        list-style: decimal;
+    }
+}
+
+.policy-header{
+    h3{
+        text-align: center;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+
+#phone-one{
+    text-align: center;
+    @include tablet{
+        text-align: end;
+    }
+    @include mobileOnly{
+        padding-top: 2rem;
+    }
+
+    img{
+        width: 70%; margin: 0 auto;
+    }
+}
+
+.desc{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    div{
+        flex-basis: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .icon{
+        text-align: center;
+        fill: $primary-color;
+        @include tablet{
+            text-align: end;
+        }
+    }
+
+    @include tablet{       
+       flex-direction: row;
+       div{
+           flex-basis: 50%;
+       }
+    }
+}
+
+
