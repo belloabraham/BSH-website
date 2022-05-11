@@ -1,11 +1,13 @@
-var preloader = document.querySelector('.preloader');
+import './main.scss';
+
+const preloader = document.querySelector('.preloader');
 window.addEventListener("load", function(){
     preloader.style.display = "none"
 }) 
 
 
-var checkBox = document.querySelector("input[name=checkbox]");
-var navMenu = document.querySelector(".nav-menu");
+const checkBox = document.querySelector("input[name=checkbox]");
+const navMenu = document.querySelector(".nav-menu");
 
 checkBox.addEventListener('change', function() {
     if(this.checked){

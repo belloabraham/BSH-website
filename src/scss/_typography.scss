@@ -1,0 +1,23 @@
+
+  @font-face {
+      font-family: 'Procyon';
+      src: url('fonts/ProcyonPro-Regular.woff2') format('woff2');
+
+      font-style: normal;
+      font-weight: normal;
+  }
+
+  body {
+      font-family: 'Procyon', "Helvetica Neue", sans-serif;
+    //  background-color: #350642;
+  }
+
+
+.text-center{text-align: center;}
+
+.description{
+    font-size: 1.5rem;
+}
+h2{
+    font-size: 3rem;
+}
