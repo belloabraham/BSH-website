@@ -1,84 +1,10 @@
 @import './scss/preloader';
 @import '~aos/src/sass/aos.scss';
 @import '~tiny-slider/src/tiny-slider.scss';
+@import './scss/media-query';
+@import './scss/colors';
+@import './scss/transition';
 
-.cookie-container {
-    position: fixed;
-    display: none;
-    bottom: 0;
-    width: 100%;
-    padding: .5rem;
-    background: transparent;
-    z-index: 1000;
-
-    @include tablet {
-        width: 50%;
-    }
-
-    @include desktop {
-        width: 40%;
-    }
-
-    @media (min-width:1440px) {
-        width: 30%;
-    }
-
-    @include hiResDisp {
-        width: 20%;
-    }
-
-
-    .cookie-flex {
-        justify-content: center;
-        align-items: start;
-        display: flex;
-        flex-direction: column;
-
-        @include tablet {
-            flex-direction: row;
-        }
-
-        .cookie-btn {
-            color: white;
-            text-align: end;
-
-            @include mobileOnly {
-                width: 100%;
-            }
-
-            button {
-                background-color: #3c88eb;
-            }
-
-            @include tablet {
-                margin-left: 1rem;
-            }
-        }
-    }
-
-    .cookie-child {
-        border-radius: 10px;
-        color: white;
-        font-size: 1rem;
-        width: auto;
-        background: black;
-        padding: 0.5rem 1rem;
-        display: flex;
-        flex-direction: column;
-
-        .title {
-            font-size: 1.5rem;
-        }
-
-        .cookie-icon {
-            display: flex;
-            gap: 1rem;
-            justify-content: start;
-            align-items: center;
-        }
-    }
-
-}
 
 h2.app-title {
     text-overflow: ellipsis;
@@ -91,15 +17,6 @@ h2.app-title {
     }
 }
 
-#main {
-    width: 100vw;
-    padding-top: 20vh;
-    overflow: hidden;
-    position: relative;
-    color: white;
-    background-image: linear-gradient(to right top, #320066, #440f6e, #551e77, #652c7f, #753a88);
-
-}
 
 .doodle {
 
@@ -109,21 +26,21 @@ h2.app-title {
     top: 0;
     bottom: 0;
 
-    background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-800-port.webp");
+    background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("images/doodles/doodle-800-port.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (max-width: 767px) and (orientation:landscape) {
-        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-800.webp");
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("images/doodles/doodle-800.webp");
     }
 
     @include desktop {
-        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-1400.webp");
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("images/doodles/doodle-1400.webp");
     }
 
     @include hiResDisp {
-        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("../images/doodles/doodle-2560.webp");
+        background: linear-gradient(to right top, rgba(50, 0, 102, 0), rgba(68, 15, 110, 0), rgba(85, 30, 119, .6), rgba(101, 44, 127, 0), rgba(117, 58, 136, 0)), url("images/doodles/doodle-2560.webp");
     }
 
 }
