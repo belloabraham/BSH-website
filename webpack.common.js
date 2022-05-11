@@ -3,9 +3,6 @@ module.exports = {
     main: "./src/main.js",
     index: "./src/index.js", //Js for a particular page, wll also contain css for that page,
     error: "./src/404.js",
-    privacy: "./src/privacy/privacy.js",
-    terms: "./src/terms/terms.js",
-    refund: "./src/refund/refund.js",
     help: "./src/help/help.js",
   },
   module: {

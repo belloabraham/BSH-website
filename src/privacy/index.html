@@ -7,26 +7,6 @@
     <meta name=”robots” content=”noindex”>
 
     <title>Privacy Policy - Bookshelf Hub</title>
-    <link rel="stylesheet" href="/css/main.css">
-
-    <style>
-      @font-face {
-          font-family: 'Procyon';
-          src: url('/fonts/ProcyonPro-Regular.woff2') format('woff2'); 
-          font-style: normal;
-          font-weight: normal;
-      }
-
-      body { font-family: 'Procyon',  "Helvetica Neue", sans-serif; } 
-
-      #main{
-        height: 40vh;
-      }
-
-    </style>
-    
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -314,35 +294,8 @@ If you choose to link our products with other websites, applications, and servic
  
 </div>
     
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-37TCZ8TRFV"></script>
-<script>
-
-  function enableTracking(){
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-37TCZ8TRFV');
-  }
-
-if(Cookies.get('bsh')){
-  enableTracking()
-}else{
-    var cookieNotice = document.getElementById('cookie-notice')
-    cookieNotice.style.display ="block"
-    var agreeBtn = document.getElementById('cookie-btn')
-    agreeBtn.addEventListener('click', function(){
-      cookieNotice.style.display ="none"
-      enableTracking()
-      Cookies.set('bsh', 'true', { expires: 365})
-    })
-}
- 
-</script>
-
-<script src="/js/main.js"></script>
 
 </body>
 </html>

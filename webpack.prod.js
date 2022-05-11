@@ -45,7 +45,7 @@ module.exports = merge(common, {
          template: "./src/privacy/index.html",
          favicon: "./src/favicon.ico",
         filename: "privacy/index.html",
-         chunks:["main","privacy"],
+         chunks:["main"],
          minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
@@ -57,7 +57,7 @@ module.exports = merge(common, {
          template: "./src/refund/index.html",
          favicon: "./src/favicon.ico",
         filename: "refund/index.html",
-         chunks:["main","refund"],
+         chunks:["main"],
          minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
@@ -69,7 +69,7 @@ module.exports = merge(common, {
          template: "./src/terms/index.html",
          favicon: "./src/favicon.ico",
         filename: "terms/index.html",
-         chunks:["main","terms"],
+         chunks:["main"],
          minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
